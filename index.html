@@ -1,0 +1,2430 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>SPORTS ALL FORMAT - राजस्थान विद्यालयी खेलकूद प्रपत्र</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1E3A8A;
+      --primary-dark: #172554;
+      --primary-light: #3B82F6;
+      --secondary: #D97706;
+      --secondary-dark: #B45309;
+      --accent: #10B981;
+      --danger: #EF4444;
+      --background: #F8FAFC;
+      --surface: #FFFFFF;
+      --border: #E2E8F0;
+      --text-main: #0F172A;
+      --text-muted: #64748B;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 14px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.05);
+      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: 'Noto Sans Devanagari', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--background);
+      color: var(--text-main);
+      font-size: 14px;
+      line-height: 1.5;
+      padding-bottom: 50px;
+    }
+
+    /* Top Sticky App Header */
+    .app-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: #FFFFFF;
+      box-shadow: var(--shadow-md);
+      padding: 12px 16px 8px;
+    }
+
+    .header-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-icon {
+      width: 42px;
+      height: 42px;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1.5px solid rgba(255, 255, 255, 0.3);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    .brand-text h1 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      line-height: 1.2;
+    }
+
+    .brand-text p {
+      font-size: 0.72rem;
+      color: #E2E8F0;
+      opacity: 0.95;
+      font-weight: 500;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-header {
+      padding: 6px 10px;
+      border-radius: var(--radius-sm);
+      font-size: 12px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-reset {
+      background: rgba(239, 68, 68, 0.2);
+      color: #FECACA;
+      border: 1px solid rgba(239, 68, 68, 0.4);
+    }
+    .btn-reset:hover {
+      background: var(--danger);
+      color: white;
+    }
+
+    /* Sub-bar / Quick Status Info */
+    .header-subbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-top: 8px;
+      padding-top: 6px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      font-size: 11px;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .badge-chip {
+      background: rgba(255, 255, 255, 0.16);
+      padding: 2px 8px;
+      border-radius: 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* Horizontal Scrollable Tabs */
+    .nav-tabs-wrapper {
+      position: sticky;
+      top: 73px;
+      z-index: 90;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+    }
+
+    .nav-tabs {
+      display: flex;
+      gap: 4px;
+      padding: 6px 8px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .nav-tabs::-webkit-scrollbar {
+      display: none;
+    }
+
+    .tab-btn {
+      flex: 0 0 auto;
+      padding: 8px 14px;
+      border: 1px solid transparent;
+      border-radius: var(--radius-md);
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 12.5px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+
+    .tab-btn:hover {
+      background: #F1F5F9;
+      color: var(--text-main);
+    }
+
+    .tab-btn.active {
+      background: #EFF6FF;
+      color: var(--primary);
+      border-color: #BFDBFE;
+      box-shadow: 0 1px 2px rgba(30, 58, 138, 0.08);
+    }
+
+    /* Main Container */
+    .app-main {
+      max-width: 960px;
+      margin: 16px auto;
+      padding: 0 12px;
+    }
+
+    /* Content Cards */
+    .card {
+      background: var(--surface);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 16px;
+      overflow: hidden;
+    }
+
+    .card-header {
+      padding: 12px 16px;
+      background: #F8FAFC;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .card-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card-body {
+      padding: 16px;
+    }
+
+    /* Forms & Inputs */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 10px;
+    }
+
+    .form-group {
+      margin-bottom: 12px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-family: inherit;
+      font-size: 13.5px;
+      color: var(--text-main);
+      background-color: #FFFFFF;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary-light);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+    }
+
+    select.form-control {
+      cursor: pointer;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 9px 18px;
+      font-family: inherit;
+      font-size: 13.5px;
+      font-weight: 600;
+      border-radius: var(--radius-sm);
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+    .btn-primary:hover {
+      background: var(--primary-dark);
+    }
+
+    .btn-secondary {
+      background: var(--secondary);
+      color: white;
+    }
+    .btn-secondary:hover {
+      background: var(--secondary-dark);
+    }
+
+    .btn-success {
+      background: var(--accent);
+      color: white;
+    }
+
+    .btn-print {
+      background: #047857;
+      color: white;
+      font-size: 14px;
+      padding: 10px 20px;
+      box-shadow: var(--shadow-sm);
+    }
+    .btn-print:hover {
+      background: #065F46;
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-danger-outline {
+      background: transparent;
+      color: var(--danger);
+      border: 1px solid #FCA5A5;
+      padding: 4px 8px;
+      font-size: 11.5px;
+      border-radius: 4px;
+    }
+    .btn-danger-outline:hover {
+      background: var(--danger);
+      color: white;
+    }
+
+    .btn-group-right {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .print-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #ECFDF5;
+      border: 1px solid #A7F3D0;
+      border-radius: var(--radius-md);
+      padding: 10px 16px;
+      margin-bottom: 16px;
+    }
+
+    .print-bar-info {
+      font-size: 13px;
+      color: #065F46;
+      font-weight: 600;
+    }
+
+    /* Screen Tables (Interactive) */
+    .table-responsive {
+      width: 100%;
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+    }
+
+    table.data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12.5px;
+      text-align: left;
+    }
+
+    table.data-table th, table.data-table td {
+      padding: 9px 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    table.data-table th {
+      background: #F1F5F9;
+      color: var(--text-muted);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    table.data-table tr:hover td {
+      background: #F8FAFC;
+    }
+
+    /* =========================================================
+       PRINT / PDF PREVIEW STYLES (Strict A4 Rajasthan Proforma)
+       ========================================================= */
+    .print-sheet {
+      background: #FFFFFF;
+      border: 1px solid #CBD5E1;
+      padding: 24px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+      color: #000000;
+      font-family: 'Noto Sans Devanagari', 'Mangal', sans-serif;
+      margin-bottom: 24px;
+      line-height: 1.45;
+    }
+
+    .doc-header {
+      text-align: center;
+      border-bottom: 2px solid #000;
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+    }
+
+    .doc-govt-tag {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .doc-main-title {
+      font-size: 18px;
+      font-weight: 800;
+      margin: 3px 0;
+      color: #000;
+    }
+
+    .doc-proforma-badge {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 800;
+      padding: 3px 12px;
+      border: 1.5px solid #000;
+      margin: 4px 0;
+      border-radius: 3px;
+    }
+
+    .doc-sub-text {
+      font-size: 12px;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    .meta-box-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 16px;
+      background: #FAFAFA;
+      border: 1px solid #000;
+      padding: 8px 12px;
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+
+    .meta-item strong {
+      font-weight: 700;
+    }
+
+    /* Print Tables */
+    table.print-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0;
+      font-size: 11.5px;
+      color: #000;
+    }
+
+    table.print-table th, table.print-table td {
+      border: 1px solid #000;
+      padding: 5px 6px;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    table.print-table th {
+      background: #F2F2F2 !important;
+      font-weight: 700;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    table.print-table td.text-left {
+      text-align: left;
+    }
+
+    /* Certification Paragraph */
+    .cert-paragraph {
+      font-size: 11.5px;
+      line-height: 1.55;
+      text-align: justify;
+      margin: 14px 0 20px;
+      padding: 6px 0;
+      border-top: 1px dashed #444;
+      border-bottom: 1px dashed #444;
+    }
+
+    /* Signature Rows */
+    .sign-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-top: 30px;
+      padding-top: 10px;
+      font-size: 12px;
+      page-break-inside: avoid;
+    }
+
+    .sign-block {
+      text-align: center;
+      width: 30%;
+    }
+
+    .sign-line {
+      border-top: 1px solid #000;
+      margin-bottom: 4px;
+      padding-top: 4px;
+      font-weight: 700;
+    }
+
+    .sign-title {
+      font-size: 11px;
+      color: #222;
+    }
+
+    /* Tab 3 Form B Photo Box */
+    .form-b-container {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+
+    .form-b-details {
+      flex: 1;
+    }
+
+    .photo-box {
+      width: 130px;
+      height: 160px;
+      border: 2px dashed #000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8px;
+      font-size: 10.5px;
+      font-weight: 600;
+      color: #333;
+      background: #FAF5FF;
+      flex-shrink: 0;
+    }
+
+    /* Form C 3 Parts */
+    .part-box {
+      border: 1.5px solid #000;
+      border-radius: 4px;
+      padding: 10px 12px;
+      margin-bottom: 12px;
+      page-break-inside: avoid;
+    }
+
+    .part-box-header {
+      font-size: 13px;
+      font-weight: 800;
+      border-bottom: 1px solid #000;
+      padding-bottom: 4px;
+      margin-bottom: 8px;
+      background: #F3F4F6;
+      margin: -10px -12px 8px -12px;
+      padding: 6px 12px;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* Tab 7 Kabaddi Grid */
+    .score-matrix-grid {
+      display: grid;
+      grid-template-columns: repeat(15, 1fr);
+      gap: 3px;
+      margin: 6px 0;
+    }
+
+    .score-num-cell {
+      border: 1px solid #000;
+      font-size: 10.5px;
+      font-weight: 700;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #FFF;
+      cursor: pointer;
+    }
+
+    .score-num-cell.checked {
+      background: #1E3A8A !important;
+      color: white !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* Toast Notification */
+    #toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: #0F172A;
+      color: #FFFFFF;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 600;
+      box-shadow: var(--shadow-lg);
+      z-index: 1000;
+      opacity: 0;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      pointer-events: none;
+    }
+
+    #toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    /* STRICT PRINT MEDIA QUERIES */
+    @media print {
+      @page {
+        size: A4 portrait;
+        margin: 8mm 10mm 10mm 10mm;
+      }
+
+      body {
+        background: #FFFFFF !important;
+        color: #000000 !important;
+        font-size: 11pt !important;
+        padding: 0 !important;
+      }
+
+      .no-print, 
+      .app-header, 
+      .nav-tabs-wrapper, 
+      .header-subbar, 
+      .card-header, 
+      .btn, 
+      .print-bar, 
+      #toast, 
+      .screen-only-form {
+        display: none !important;
+      }
+
+      .app-main {
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+      .tab-content {
+        display: none !important;
+      }
+
+      .tab-content.active {
+        display: block !important;
+      }
+
+      .card {
+        border: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+      .card-body {
+        padding: 0 !important;
+      }
+
+      .print-sheet {
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100% !important;
+      }
+
+      table.print-table {
+        border: 1px solid #000 !important;
+        width: 100% !important;
+      }
+
+      table.print-table th, 
+      table.print-table td {
+        border: 1px solid #000 !important;
+        color: #000 !important;
+      }
+
+      .sign-row {
+        page-break-inside: avoid !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Top App Header -->
+  <header class="app-header no-print">
+    <div class="header-top">
+      <div class="brand-group">
+        <div class="brand-icon">🏆</div>
+        <div class="brand-text">
+          <h1>SPORTS ALL FORMAT</h1>
+          <p>मेरा सपना - मेरा विद्यालय | राजस्थान विद्यालयी खेलकूद संपूर्ण प्रपत्र एवं स्कोर शीट जनरेटर</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button class="btn-header btn-reset" onclick="confirmResetData()" title="डेटा रीसेट करें">
+          🔄 रीसेट
+        </button>
+      </div>
+    </div>
+    <div class="header-subbar">
+      <div class="badge-chip">🏛️ शिक्षा विभाग, राजस्थान</div>
+      <div class="badge-chip" id="hdr-game-badge">कबड्डी (17 वर्ष छात्र)</div>
+      <div class="badge-chip">💾 स्वतः सहेजा (LocalStorage)</div>
+      <div class="badge-chip">📄 A4 रेडी</div>
+    </div>
+  </header>
+
+  <!-- Horizontal Scrollable Navigation Tabs -->
+  <nav class="nav-tabs-wrapper no-print">
+    <div class="nav-tabs" id="tabBar">
+      <button class="tab-btn active" onclick="switchTab('tab1')">⚙️ 1. मास्टर सेटअप व खिलाड़ी</button>
+      <button class="tab-btn" onclick="switchTab('tab2')">📑 2. प्रपत्र - 'क' (दल पात्रता)</button>
+      <button class="tab-btn" onclick="switchTab('tab3')">🪪 3. प्रपत्र - 'ख' (खिलाड़ी परिचय)</button>
+      <button class="tab-btn" onclick="switchTab('tab4')">🩺 4. प्रपत्र - 'ग' (सहमति व चिकित्सा)</button>
+      <button class="tab-btn" onclick="switchTab('tab5')">⛺ 5. शिविर व आवास व्यवस्था</button>
+      <button class="tab-btn" onclick="switchTab('tab6')">💰 6. TA/DA बिल पंजिका</button>
+      <button class="tab-btn" onclick="switchTab('tab7')">📋 7. खेल स्कोर शीट</button>
+      <button class="tab-btn" onclick="switchTab('tab8')">📄 8. कार्यमुक्ति प्रमाण-पत्र</button>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <main class="app-main">
+
+    <!-- ==========================================
+         TAB 1: MASTER SETUP & PLAYER BUILDER
+         ========================================== -->
+    <section id="tab1" class="tab-content active">
+      <div class="card screen-only-form">
+        <div class="card-header">
+          <div class="card-title">⚙️ प्रतियोगिता एवं विद्यालय मास्टर सेटअप (Master Configuration)</div>
+          <span style="font-size: 12px; color: var(--accent); font-weight: 600;">✓ सभी प्रपत्रों में स्वतः अपडेट होगा</span>
+        </div>
+        <div class="card-body">
+          <div class="grid-2">
+            <div class="form-group">
+              <label>प्रतियोगिता / शिविर का नाम :</label>
+              <input type="text" id="cfg_tournamentName" class="form-control" oninput="saveMasterData()">
+            </div>
+            <div class="form-group">
+              <label>मूल / आयोजक विद्यालय का नाम :</label>
+              <input type="text" id="cfg_schoolName" class="form-control" oninput="saveMasterData()">
+            </div>
+            <div class="form-group">
+              <label>प्रतियोगिता / शिविर स्थल :</label>
+              <input type="text" id="cfg_venue" class="form-control" oninput="saveMasterData()">
+            </div>
+            <div class="form-group">
+              <label>खेल का नाम (Game) :</label>
+              <select id="cfg_gameName" class="form-control" onchange="saveMasterData()">
+                <option value="कबड्डी">कबड्डी (Kabaddi)</option>
+                <option value="खो-खो">खो-खो (Kho-Kho)</option>
+                <option value="सॉफ्टबॉल">सॉफ्टबॉल (Softball)</option>
+                <option value="वॉलीबॉल">वॉलीबॉल (Volleyball)</option>
+                <option value="एथलेटिक्स">एथलेटिक्स (Athletics)</option>
+                <option value="क्रिकेट">क्रिकेट (Cricket)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>आयु वर्ग एवं श्रेणी (Age Category) :</label>
+              <select id="cfg_ageCategory" class="form-control" onchange="saveMasterData()">
+                <option value="17 वर्ष (छात्र)">17 वर्ष (छात्र)</option>
+                <option value="17 वर्ष (छात्रा)">17 वर्ष (छात्रा)</option>
+                <option value="19 वर्ष (छात्र)">19 वर्ष (छात्र)</option>
+                <option value="19 वर्ष (छात्रा)">19 वर्ष (छात्रा)</option>
+                <option value="14 वर्ष (छात्र/छात्रा)">14 वर्ष (छात्र/छात्रा)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>दिनांक / अवधि :</label>
+              <input type="text" id="cfg_tournamentDates" class="form-control" oninput="saveMasterData()">
+            </div>
+            <div class="form-group">
+              <label>दल प्रभारी / शारीरिक शिक्षक :</label>
+              <input type="text" id="cfg_inchargeName" class="form-control" oninput="saveMasterData()">
+            </div>
+            <div class="form-group">
+              <label>संस्था प्रधान / मुख्य संयोजक :</label>
+              <input type="text" id="cfg_principalName" class="form-control" oninput="saveMasterData()">
+            </div>
+            <div class="form-group" style="grid-column: 1 / -1;">
+              <label>शिविर / आवास व्यवस्था प्रभारी :</label>
+              <input type="text" id="cfg_campIncharge" class="form-control" oninput="saveMasterData()">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Player Registration Box -->
+      <div class="card screen-only-form">
+        <div class="card-header">
+          <div class="card-title">👥 मास्टर खिलाड़ी सूची संपादन (Master Player List Database)</div>
+          <span style="font-size: 12px; font-weight: 700; color: var(--primary);" id="playerCountBadge">कुल खिलाड़ी: 5</span>
+        </div>
+        <div class="card-body">
+          <div style="background: #F1F5F9; padding: 12px; border-radius: var(--radius-sm); margin-bottom: 16px;">
+            <div style="font-weight: 700; font-size: 13px; margin-bottom: 8px; color: var(--primary-dark);">➕ नया खिलाड़ी शामिल करें :</div>
+            <div class="grid-4">
+              <div class="form-group">
+                <label>खिलाड़ी का नाम *</label>
+                <input type="text" id="new_name" class="form-control" placeholder="उदा. राहुल शर्मा">
+              </div>
+              <div class="form-group">
+                <label>पिता का नाम *</label>
+                <input type="text" id="new_father" class="form-control" placeholder="उदा. श्री रामगोपाल">
+              </div>
+              <div class="form-group">
+                <label>जन्मतिथि *</label>
+                <input type="text" id="new_dob" class="form-control" placeholder="DD/MM/YYYY">
+              </div>
+              <div class="form-group">
+                <label>कक्षा *</label>
+                <input type="text" id="new_class" class="form-control" placeholder="उदा. 11वीं">
+              </div>
+              <div class="form-group">
+                <label>एस.आर. नं. (SR No.) *</label>
+                <input type="text" id="new_sr" class="form-control" placeholder="उदा. 4521">
+              </div>
+              <div class="form-group">
+                <label>माता का नाम</label>
+                <input type="text" id="new_mother" class="form-control" placeholder="उदा. श्रीमती विमला देवी">
+              </div>
+              <div class="form-group">
+                <label>प्रवेश दिनांक</label>
+                <input type="text" id="new_admDate" class="form-control" placeholder="01/07/2021">
+              </div>
+              <div class="form-group">
+                <label>पहचान चिन्ह</label>
+                <input type="text" id="new_mark" class="form-control" placeholder="दाहिने गाल पर तिल">
+              </div>
+            </div>
+            <div style="display: flex; justify-content: flex-end; margin-top: 8px;">
+              <button class="btn btn-primary" onclick="addPlayer()">➕ खिलाड़ी जोड़ें</button>
+            </div>
+          </div>
+
+          <!-- Table of Players -->
+          <div class="table-responsive">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>क्र.सं.</th>
+                  <th>खिलाड़ी का नाम</th>
+                  <th>पिता का नाम</th>
+                  <th>जन्मतिथि</th>
+                  <th>कक्षा</th>
+                  <th>एस.आर. नं.</th>
+                  <th>माता का नाम</th>
+                  <th>हटाएं</th>
+                </tr>
+              </thead>
+              <tbody id="playerTableBody">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         TAB 2: FORMAT 'K' (ELIGIBILITY LIST)
+         ========================================== -->
+    <section id="tab2" class="tab-content">
+      <div class="print-bar no-print">
+        <div class="print-bar-info">
+          📋 प्रपत्र - 'क' : समेकित दल पात्रता एवं पंजीकरण सूची (A4 साइज में तैयार)
+        </div>
+        <button class="btn btn-print" onclick="triggerPrint('प्रपत्र_क_पात्रता_सूची')">
+          🖨️ A4 प्रिंट / PDF सेव करें
+        </button>
+      </div>
+
+      <div class="print-sheet print-area">
+        <div class="doc-header">
+          <div class="doc-govt-tag">राजस्थान सरकार - स्कूल शिक्षा विभाग</div>
+          <div class="doc-main-title" id="p2_tournamentName">70वीं जिला स्तरीय विद्यालयी खेलकूद प्रतियोगिता</div>
+          <div class="doc-proforma-badge">प्रपत्र - 'क' : समेकित दल पात्रता एवं पंजीकरण सूची (सत्र 2026-27)</div>
+          <div class="doc-sub-text">कार्यालय जिला शिक्षा अधिकारी (माध्यमिक/प्रारंभिक) एवं मुख्य संयोजक</div>
+        </div>
+
+        <div class="meta-box-grid">
+          <div class="meta-item"><strong>खेल का नाम :</strong> <span id="p2_gameName">कबड्डी</span></div>
+          <div class="meta-item"><strong>आयु वर्ग एवं श्रेणी :</strong> <span id="p2_ageCategory">17 वर्ष (छात्र)</span></div>
+          <div class="meta-item"><strong>प्रतियोगिता स्थल :</strong> <span id="p2_venue">रा.उ.मा.वि. समलेटी / बड़ागांव (झुंझुनू)</span></div>
+          <div class="meta-item"><strong>अवधि / दिनांक :</strong> <span id="p2_dates">23/10/2026 से 26/10/2026</span></div>
+          <div class="meta-item" style="grid-column: 1 / -1;">
+            <strong>दल का नाम / विद्यालय :</strong> <span id="p2_schoolName">राजकीय उच्च माध्यमिक विद्यालय समलेटी (महवा, दौसा)</span>
+          </div>
+        </div>
+
+        <table class="print-table">
+          <thead>
+            <tr>
+              <th style="width: 38px;">क्र.सं.</th>
+              <th>खिलाड़ी का नाम</th>
+              <th>पिता का नाम</th>
+              <th style="width: 90px;">जन्मतिथि<br>(अंकों में)</th>
+              <th style="width: 65px;">वर्तमान<br>कक्षा</th>
+              <th style="width: 85px;">प्रवेश<br>दिनांक</th>
+              <th style="width: 75px;">एस.आर.<br>संख्या</th>
+              <th style="width: 100px;">खिलाड़ी के<br>हस्ताक्षर</th>
+            </tr>
+          </thead>
+          <tbody id="p2_tableBody">
+            <!-- Populated dynamically -->
+          </tbody>
+        </table>
+
+        <div class="cert-paragraph">
+          <strong>सत्यापन एवं घोषणा :</strong> प्रमाणित किया जाता है कि उपरोक्त विवरण विद्यालय के मूल एस.आर. रजिस्टर (प्रवेश पंजिका) एवं अधिकृत जन्म प्रमाण-पत्र से मिलान कर पूर्णतः सत्यापित किया गया है। सूची में दर्ज सभी खिलाड़ी विद्यालय में नियमित अध्ययनरत हैं तथा उनकी आयु एवं योग्यता राजस्थान विद्यालयी खेलकूद प्रतियोगिता नियमों के पूर्णतः अनुरूप है। कोई भी खिलाड़ी फर्जी अथवा अपात्र नहीं है।
+        </div>
+
+        <div class="sign-row">
+          <div class="sign-block">
+            <div class="sign-line" id="p2_inchargeSign">श्री रामकेश मीना</div>
+            <div class="sign-title">शारीरिक शिक्षक / दल प्रभारी<br>(मय पद व विद्यालय नाम)</div>
+          </div>
+          <div class="sign-block">
+            <div style="font-size: 11px; margin-bottom: 25px;">(विद्यालय सील / मोहर)</div>
+            <div class="sign-title">कार्यालय मोहर</div>
+          </div>
+          <div class="sign-block">
+            <div class="sign-line" id="p2_principalSign">श्री विजय सिंह मीना</div>
+            <div class="sign-title">सं संस्था प्रधान / प्रधानाचार्य<br>(हस्ताक्षर मय पद मुहर)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         TAB 3: FORMAT 'KH' (INDIVIDUAL IDENTITY)
+         ========================================== -->
+    <section id="tab3" class="tab-content">
+      <div class="card screen-only-form">
+        <div class="card-header">
+          <div class="card-title">🪪 खिलाड़ी चयन एवं व्यक्तिगत विवरण संपादन</div>
+          <span style="font-size: 12px; color: var(--primary); font-weight: 600;">खिलाड़ी चुनें, नीचे प्रपत्र स्वतः भर जाएगा</span>
+        </div>
+        <div class="card-body">
+          <div class="grid-3">
+            <div class="form-group" style="grid-column: 1 / -1;">
+              <label style="font-size: 13px; font-weight: 700; color: var(--primary-dark);">🎯 खिलाड़ी चुनें (Select Player) :</label>
+              <select id="p3_playerSelect" class="form-control" style="font-weight: 700; background: #EFF6FF;" onchange="onPlayerSelectChange()">
+                <!-- Populated dynamically -->
+              </select>
+            </div>
+            <div class="form-group">
+              <label>माता का नाम :</label>
+              <input type="text" id="p3_mother" class="form-control" oninput="updateCurrentPlayerData()">
+            </div>
+            <div class="form-group">
+              <label>जन्मतिथि (शब्दों में) :</label>
+              <input type="text" id="p3_wordsDob" class="form-control" oninput="updateCurrentPlayerData()">
+            </div>
+            <div class="form-group">
+              <label>विद्यालय प्रवेश दिनांक :</label>
+              <input type="text" id="p3_admDate" class="form-control" oninput="updateCurrentPlayerData()">
+            </div>
+            <div class="form-group">
+              <label>पूर्व वर्ष में उत्तीर्ण कक्षा व प्रतिशत :</label>
+              <input type="text" id="p3_prevClass" class="form-control" oninput="updateCurrentPlayerData()">
+            </div>
+            <div class="form-group">
+              <label>शारीरिक पहचान चिन्ह (Mole / Mark) :</label>
+              <input type="text" id="p3_mark" class="form-control" oninput="updateCurrentPlayerData()">
+            </div>
+            <div class="form-group">
+              <label>स्थायी पता एवं दूरभाष :</label>
+              <input type="text" id="p3_phone" class="form-control" oninput="updateCurrentPlayerData()">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="print-bar no-print">
+        <div class="print-bar-info">
+          🪪 प्रपत्र - 'ख' : व्यक्तिगत खिलाड़ी पात्रता एवं परिचय पत्र (पासपोर्ट फोटो सहित A4 फॉर्मेट)
+        </div>
+        <button class="btn btn-print" onclick="triggerPrint('प्रपत्र_ख_परिचय_पत्र')">
+          🖨️ A4 प्रिंट / PDF सेव करें
+        </button>
+      </div>
+
+      <!-- Printable Sheet Form B -->
+      <div class="print-sheet print-area">
+        <div class="doc-header">
+          <div class="doc-govt-tag">राजस्थान सरकार - स्कूल शिक्षा विभाग</div>
+          <div class="doc-main-title" id="p3_docTournament">70वीं जिला स्तरीय विद्यालयी खेलकूद प्रतियोगिता</div>
+          <div class="doc-proforma-badge">प्रपत्र - 'ख' : व्यक्तिगत खिलाड़ी पात्रता एवं परिचय पत्र (सत्र 2026-27)</div>
+          <div class="doc-sub-text">स्थान: <span id="p3_docVenue">रा.उ.मा.वि. समलेटी / बड़ागांव (झुंझुनू)</span> | खेल: <span id="p3_docGame">कबड्डी</span> (<span id="p3_docAge">17 वर्ष छात्र</span>)</div>
+        </div>
+
+        <div class="form-b-container">
+          <div class="form-b-details">
+            <table class="print-table" style="margin: 0;">
+              <tbody>
+                <tr>
+                  <td style="width: 32px; font-weight: 700;">1</td>
+                  <td class="text-left" style="width: 170px; font-weight: 700;">खिलाड़ी का पूरा नाम :</td>
+                  <td class="text-left"><strong id="p3_d_name" style="font-size: 13px;">राहुल शर्मा</strong></td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 700;">2</td>
+                  <td class="text-left" style="font-weight: 700;">पिता का नाम :</td>
+                  <td class="text-left" id="p3_d_father">श्री रामगोपाल शर्मा</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 700;">3</td>
+                  <td class="text-left" style="font-weight: 700;">माता का नाम :</td>
+                  <td class="text-left" id="p3_d_mother">श्रीमती विमला देवी</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 700;">4</td>
+                  <td class="text-left" style="font-weight: 700;">जन्मतिथि (अंकों में) :</td>
+                  <td class="text-left"><span id="p3_d_dob">15/07/2009</span></td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 700;">5</td>
+                  <td class="text-left" style="font-weight: 700;">जन्मतिथि (शब्दों में) :</td>
+                  <td class="text-left" id="p3_d_wordsDob">पंद्रह जुलाई दो हजार नौ</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 700;">6</td>
+                  <td class="text-left" style="font-weight: 700;">विद्यालय में प्रवेश दिनांक व SR :</td>
+                  <td class="text-left">प्रवेश: <span id="p3_d_admDate">01/07/2021</span> | एस.आर. नं.: <strong id="p3_d_sr">4521</strong></td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 700;">7</td>
+                  <td class="text-left" style="font-weight: 700;">वर्तमान कक्षा एवं वर्ग :</td>
+                  <td class="text-left" id="p3_d_class">11वीं (कला वर्ग)</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 700;">8</td>
+                  <td class="text-left" style="font-weight: 700;">पूर्व वर्ष उत्तीर्ण कक्षा व वर्ष :</td>
+                  <td class="text-left" id="p3_d_prevClass">10वीं (वर्ष 2024 - 68%)</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 700;">9</td>
+                  <td class="text-left" style="font-weight: 700;">शारीरिक पहचान चिन्ह :</td>
+                  <td class="text-left" id="p3_d_mark">दाहिने गाल पर तिल</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 700;">10</td>
+                  <td class="text-left" style="font-weight: 700;">स्थायी पता व मोबाइल नं. :</td>
+                  <td class="text-left" id="p3_d_phone">ग्राम व पोस्ट समलेटी, तह. महवा (दौसा) मो. 9876543210</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 700;">11</td>
+                  <td class="text-left" style="font-weight: 700;">विद्यालय का नाम :</td>
+                  <td class="text-left"><strong id="p3_d_school">राजकीय उच्च माध्यमिक विद्यालय समलेटी (महवा, दौसा)</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="photo-box">
+            <div style="font-size: 26px; margin-bottom: 6px;">📷</div>
+            <div>खिलाड़ी का नवीनतम पासपोर्ट साइज फोटो</div>
+            <div style="font-size: 9px; margin-top: 8px; color: #555;">(संस्था प्रधान द्वारा प्रमाणित)</div>
+          </div>
+        </div>
+
+        <div class="cert-paragraph" style="margin-top: 10px;">
+          <strong>प्रमाणीकरण :</strong> प्रमाणित किया जाता है कि उपरोक्त छात्र/छात्रा इस विद्यालय का नियमित विद्यार्थी है तथा इसकी जन्मतिथि विद्यालय की छात्र प्रवेश पंजिका (SR Register) के पूर्णतः अनुसार है। छात्र/छात्रा का चरित्र उत्तम है एवं यह खेल प्रतियोगिता में भाग लेने हेतु पूर्णतः पात्र है।
+        </div>
+
+        <div class="sign-row" style="margin-top: 35px;">
+          <div class="sign-block">
+            <div class="sign-line">खिलाड़ी के हस्ताक्षर</div>
+            <div class="sign-title">(नाम: <span id="p3_signPlayer">राहुल शर्मा</span>)</div>
+          </div>
+          <div class="sign-block">
+            <div class="sign-line" id="p3_signTeacher">श्री रामकेश मीना</div>
+            <div class="sign-title">शारीरिक शिक्षक / दल प्रभारी</div>
+          </div>
+          <div class="sign-block">
+            <div class="sign-line" id="p3_signPrincipal">श्री विजय सिंह मीना</div>
+            <div class="sign-title">संस्था प्रधान (मय पद मुहर)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         TAB 4: FORMAT 'G' (CONSENT & MEDICAL)
+         ========================================== -->
+    <section id="tab4" class="tab-content">
+      <div class="print-bar no-print">
+        <div class="print-bar-info">
+          🩺 प्रपत्र - 'ग' : अभिभावक सहमति, अध्ययनरत एवं चिकित्सा प्रमाण-पत्र (सिंगल A4 पेज पर 3 भाग)
+        </div>
+        <button class="btn btn-print" onclick="triggerPrint('प्रपत्र_ग_चिकित्सा_सहमति')">
+          🖨️ A4 प्रिंट / PDF सेव करें
+        </button>
+      </div>
+
+      <div class="print-sheet print-area">
+        <div class="doc-header">
+          <div class="doc-govt-tag">राजस्थान सरकार - स्कूल शिक्षा विभाग</div>
+          <div class="doc-main-title" id="p4_docTournament">70वीं जिला स्तरीय विद्यालयी खेलकूद प्रतियोगिता</div>
+          <div class="doc-proforma-badge">प्रपत्र - 'ग' : संयुक्त अभिभावक सहमति, अध्ययनरत एवं चिकित्सा प्रमाण-पत्र</div>
+          <div class="doc-sub-text">सत्र: 2026-27 | प्रतियोगिता अवधि: <span id="p4_docDates">23/10/2026 से 26/10/2026</span></div>
+        </div>
+
+        <!-- Part 1: Parent Consent -->
+        <div class="part-box">
+          <div class="part-box-header">भाग - 1 : अभिभावक / माता-पिता का सहमति-पत्र (Parent Consent Certificate)</div>
+          <div style="font-size: 11.5px; line-height: 1.6; text-align: justify;">
+            मैं <strong><span id="p4_parentName">श्री रामगोपाल शर्मा</span></strong> (पिता/माता/अभिभावक) छात्र/छात्रा <strong><span id="p4_studentName">राहुल शर्मा</span></strong>, कक्षा <strong><span id="p4_studentClass">11वीं</span></strong>, विद्यालय <strong><span id="p4_studentSchool">रा.उ.मा.वि. समलेटी (दौसा)</span></strong> को <strong><span id="p4_part1Tourn">70वीं जिला स्तरीय विद्यालयी खेलकूद प्रतियोगिता</span></strong> (खेल: <strong><span id="p4_part1Game">कबड्डी</span></strong>) में भाग लेने एवं यात्रा करने हेतु अपनी पूर्ण, स्वतंत्र एवं निःशर्त सहमति प्रदान करता/करती हूँ। मुझे ज्ञात है कि यात्रा एवं प्रतियोगिता के दौरान विभागीय अनुशासन नियमों की पालना अनिवार्य होगी।
+          </div>
+          <div class="sign-row" style="margin-top: 18px;">
+            <div style="font-size: 11px;">दिनांक: ..............<br>स्थान: समलेटी</div>
+            <div class="sign-block" style="width: 45%;">
+              <div class="sign-line">अभिभावक / संरक्षक के हस्ताक्षर</div>
+              <div class="sign-title">नाम: <span id="p4_parentSign">श्री रामगोपाल शर्मा</span> | मो. <span id="p4_parentPhone">9876543210</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Part 2: Medical Fitness -->
+        <div class="part-box">
+          <div class="part-box-header">भाग - 2 : राजकीय चिकित्सा अधिकारी द्वारा स्वास्थ्य एवं शारीरिक योग्यता प्रमाण-पत्र (Medical Fitness)</div>
+          <div style="font-size: 11.5px; line-height: 1.6; text-align: justify;">
+            प्रमाणित किया जाता है कि मैंने आज दिनांक .................... को छात्र/छात्रा <strong><span id="p4_medStudentName">राहुल शर्मा</span></strong> पुत्र/पुत्री श्री <strong><span id="p4_medFatherName">श्री रामगोपाल शर्मा</span></strong>, आयु <strong>16 वर्ष</strong> का व्यक्तिगत चिकित्सकीय एवं स्वास्थ्य परीक्षण किया है। परीक्षणोपरांत यह पाया गया कि छात्र/छात्रा शारीरिक एवं मानसिक रूप से पूर्णतः स्वस्थ है तथा किसी संक्रामक रोग से पीड़ित नहीं है। छात्र <strong><span id="p4_medGame">कबड्डी</span></strong> खेलकूद प्रतियोगिता में भाग लेने हेतु पूर्णतः योग्य (PHYSICALLY & MEDICALLY FIT) प्रमाणित किया जाता है।
+          </div>
+          <div class="sign-row" style="margin-top: 22px;">
+            <div class="sign-block" style="width: 35%;">
+              <div style="font-size: 11px; margin-bottom: 25px;">(राजकीय चिकित्सालय सील)</div>
+              <div class="sign-title">अस्पताल गोल मोहर</div>
+            </div>
+            <div class="sign-block" style="width: 45%;">
+              <div class="sign-line">चिकित्सा अधिकारी के हस्ताक्षर</div>
+              <div class="sign-title">(मय नाम, पद एवं रजिस्ट्रेशन नंबर)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Part 3: Head of Institution Certification -->
+        <div class="part-box">
+          <div class="part-box-header">भाग - 3 : संस्था प्रधान द्वारा नियमित अध्ययनरत एवं जन्मतिथि प्रमाणीकरण</div>
+          <div style="font-size: 11.5px; line-height: 1.6; text-align: justify;">
+            प्रमाणित किया जाता है कि छात्र/छात्रा <strong><span id="p4_headStudent">राहुल शर्मा</span></strong> पुत्र/पुत्री श्री <strong><span id="p4_headFather">श्री रामगोपाल शर्मा</span></strong>, एस.आर. संख्या <strong><span id="p4_headSr">4521</span></strong> इस विद्यालय <strong><span id="p4_headSchool">रा.उ.मा.वि. समलेटी (महवा, दौसा)</span></strong> में कक्षा <strong><span id="p4_headClass">11वीं</span></strong> में नियमित अध्ययनरत है। विद्यालय छात्र प्रवेश पंजिका (SR Register) के अनुसार छात्र की जन्मतिथि <strong><span id="p4_headDob">15/07/2009</span></strong> है।
+          </div>
+          <div class="sign-row" style="margin-top: 22px;">
+            <div class="sign-block" style="width: 45%;">
+              <div class="sign-line" id="p4_headTeacher">श्री रामकेश मीना</div>
+              <div class="sign-title">शारीरिक शिक्षक / दल प्रभारी</div>
+            </div>
+            <div class="sign-block" style="width: 45%;">
+              <div class="sign-line" id="p4_headPrincipal">श्री विजय सिंह मीना</div>
+              <div class="sign-title">संस्था प्रधान (हस्ताक्षर मय पद मुहर)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         TAB 5: CAMP & ACCOMMODATION
+         ========================================== -->
+    <section id="tab5" class="tab-content">
+      <div class="card screen-only-form">
+        <div class="card-header">
+          <div class="card-title">⛺ शिविर एवं आवास व्यवस्था विवरण संपादन</div>
+        </div>
+        <div class="card-body">
+          <div class="grid-3">
+            <div class="form-group">
+              <label>शिविर का प्रकार :</label>
+              <input type="text" id="p5_campType" class="form-control" value="पूर्व प्रतियोगिता सघन अभ्यास शिविर एवं आवास" oninput="renderCampSheet()">
+            </div>
+            <div class="form-group">
+              <label>आवास भवन / छात्रावास का नाम :</label>
+              <input type="text" id="p5_buildingName" class="form-control" value="रा.उ.मा.वि. बड़ागांव छात्र छात्रावास भवन" oninput="renderCampSheet()">
+            </div>
+            <div class="form-group">
+              <label>आवंटित कक्ष संख्या (Room Nos.) :</label>
+              <input type="text" id="p5_rooms" class="form-control" value="कक्ष संख्या 04, 05 एवं 06" oninput="renderCampSheet()">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="print-bar no-print">
+        <div class="print-bar-info">
+          ⛺ शिविर एवं आवास व्यवस्था पंजिका (Camp & Accommodation Format)
+        </div>
+        <button class="btn btn-print" onclick="triggerPrint('शिविर_आवास_व्यवस्था_पंजिका')">
+          🖨️ A4 प्रिंट / PDF सेव करें
+        </button>
+      </div>
+
+      <div class="print-sheet print-area">
+        <div class="doc-header">
+          <div class="doc-govt-tag">राजस्थान सरकार - स्कूल शिक्षा विभाग</div>
+          <div class="doc-main-title" id="p5_docTournament">70वीं जिला स्तरीय विद्यालयी खेलकूद प्रतियोगिता</div>
+          <div class="doc-proforma-badge">शिविर एवं आवास व्यवस्था / दैनिक उपस्थिति पंजिका (सत्र 2026-27)</div>
+          <div class="doc-sub-text">आवास भवन: <span id="p5_d_building">रा.उ.मा.वि. बड़ागांव छात्र छात्रावास भवन</span> | आवंटित कक्ष: <strong id="p5_d_rooms">कक्ष संख्या 04, 05 एवं 06</strong></div>
+        </div>
+
+        <div class="meta-box-grid">
+          <div class="meta-item"><strong>शिविर का प्रकार :</strong> <span id="p5_d_campType">पूर्व प्रतियोगिता सघन अभ्यास शिविर</span></div>
+          <div class="meta-item"><strong>खेल एवं वर्ग :</strong> <span id="p5_d_game">कबड्डी (17 वर्ष छात्र)</span></div>
+          <div class="meta-item"><strong>शिविर स्थल :</strong> <span id="p5_d_venue">रा.उ.मा.वि. समलेटी / बड़ागांव (झुंझुनू)</span></div>
+          <div class="meta-item"><strong>आवास व्यवस्था प्रभारी :</strong> <span id="p5_d_incharge">श्री कमलेश कुमार सैन / श्री हरफूल सिंह गुर्जर</span></div>
+          <div class="meta-item" style="grid-column: 1 / -1;">
+            <strong>विद्यालय / दल का नाम :</strong> <span id="p5_d_school">राजकीय उच्च माध्यमिक विद्यालय समलेटी (महवा, दौसा)</span>
+          </div>
+        </div>
+
+        <table class="print-table">
+          <thead>
+            <tr>
+              <th style="width: 35px;">क्र.सं.</th>
+              <th>खिलाड़ी का नाम</th>
+              <th>पिता का नाम</th>
+              <th style="width: 50px;">कक्षा</th>
+              <th style="width: 75px;">आगमन समय</th>
+              <th style="width: 60px;">कक्ष सं.</th>
+              <th style="width: 65px;">प्रातः उप.</th>
+              <th style="width: 65px;">सायं उप.</th>
+              <th style="width: 95px;">प्रस्थान व हस्ताक्षर</th>
+            </tr>
+          </thead>
+          <tbody id="p5_tableBody">
+            <!-- Populated dynamically -->
+          </tbody>
+        </table>
+
+        <div style="font-size: 11px; margin: 10px 0; line-height: 1.5; color: #333;">
+          <strong>शिविर अनुशासन निर्देश :</strong> सभी खिलाड़ी आवास प्रभारी के निर्देशों की पूर्ण पालना करेंगे। बिना अनुमति शिविर परिसर से बाहर जाना वर्जित है। दैनिक उपस्थिति प्रातः 06:30 एवं सायं 07:00 बजे अनिवार्य रूप से दर्ज की जाएगी।
+        </div>
+
+        <div class="sign-row" style="margin-top: 30px;">
+          <div class="sign-block">
+            <div class="sign-line" id="p5_signCampIncharge">श्री कमलेश कुमार सैन</div>
+            <div class="sign-title">शिविर / आवास व्यवस्था प्रभारी</div>
+          </div>
+          <div class="sign-block">
+            <div class="sign-line" id="p5_signCoach">श्री रामकेश मीना</div>
+            <div class="sign-title">दल प्रभारी / शारीरिक शिक्षक</div>
+          </div>
+          <div class="sign-block">
+            <div class="sign-line" id="p5_signPrincipal">श्री विजय सिंह मीना</div>
+            <div class="sign-title">संस्था प्रधान / मुख्य संयोजक</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         TAB 6: TA/DA BILL & ACQUITTANCE ROLL
+         ========================================== -->
+    <section id="tab6" class="tab-content">
+      <div class="card screen-only-form">
+        <div class="card-header">
+          <div class="card-title">💰 यात्रा भत्ता (TA) एवं दैनिक भत्ता (DA) दर निर्धारण</div>
+          <span style="font-size: 12px; color: var(--accent); font-weight: 700;">✓ सभी गणना स्वतः एवं सटीक होगी</span>
+        </div>
+        <div class="card-body">
+          <div class="grid-3">
+            <div class="form-group">
+              <label>यात्रा मार्ग (Route) :</label>
+              <input type="text" id="p6_route" class="form-control" value="समलेटी से झुंझुनू एवं वापसी" oninput="calculateTADA()">
+            </div>
+            <div class="form-group">
+              <label>यात्रा का साधन (Mode) :</label>
+              <input type="text" id="p6_mode" class="form-control" value="राजस्थान रोडवेज बस / एक्सप्रेस" oninput="calculateTADA()">
+            </div>
+            <div class="form-group">
+              <label>प्रति खिलाड़ी कुल किराया (TA ₹) :</label>
+              <input type="number" id="p6_taRate" class="form-control" value="360" oninput="calculateTADA()">
+            </div>
+            <div class="form-group">
+              <label>कुल दिवस (Days) :</label>
+              <input type="number" id="p6_days" class="form-control" value="4" oninput="calculateTADA()">
+            </div>
+            <div class="form-group">
+              <label>दैनिक भत्ता दर प्रति दिन (DA ₹) :</label>
+              <input type="number" id="p6_daRate" class="form-control" value="150" oninput="calculateTADA()">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="print-bar no-print">
+        <div class="print-bar-info">
+          💰 यात्रा भत्ता (TA) एवं दैनिक भत्ता (DA) भुगतान पंजिका (Acquittance Roll)
+        </div>
+        <button class="btn btn-print" onclick="triggerPrint('TADA_भुगतान_पंजिका')">
+          🖨️ A4 प्रिंट / PDF सेव करें
+        </button>
+      </div>
+
+      <div class="print-sheet print-area">
+        <div class="doc-header">
+          <div class="doc-govt-tag">राजस्थान सरकार - स्कूल शिक्षा विभाग</div>
+          <div class="doc-main-title" id="p6_docTournament">70वीं जिला स्तरीय विद्यालयी खेलकूद प्रतियोगिता</div>
+          <div class="doc-proforma-badge">यात्रा भत्ता (TA) एवं दैनिक भत्ता (DA) बिल एवं भुगतान पंजिका (Acquittance Roll)</div>
+          <div class="doc-sub-text">सत्र: 2026-27 | यात्रा मार्ग: <strong id="p6_d_route">समलेटी से झुंझुनू एवं वापसी</strong> (साधन: <span id="p6_d_mode">रोडवेज बस</span>)</div>
+        </div>
+
+        <div class="meta-box-grid">
+          <div class="meta-item"><strong>दल का नाम / विद्यालय :</strong> <span id="p6_d_school">रा.उ.मा.वि. समलेटी (दौसा)</span></div>
+          <div class="meta-item"><strong>खेल एवं आयु वर्ग :</strong> <span id="p6_d_game">कबड्डी (17 वर्ष छात्र)</span></div>
+          <div class="meta-item"><strong>प्रतियोगिता अवधि :</strong> <span id="p6_d_dates">23/10/2026 से 26/10/2026</span></div>
+          <div class="meta-item"><strong>दैनिक भत्ता दर :</strong> <span id="p6_d_rates">₹150 प्रति दिन × 4 दिवस = ₹600</span></div>
+        </div>
+
+        <table class="print-table">
+          <thead>
+            <tr>
+              <th style="width: 32px;">क्र.सं.</th>
+              <th>खिलाड़ी का नाम</th>
+              <th>पिता का नाम</th>
+              <th style="width: 50px;">कक्षा</th>
+              <th style="width: 65px;">यात्रा भत्ता<br>(TA ₹)</th>
+              <th style="width: 45px;">दिवस</th>
+              <th style="width: 55px;">DA दर<br>(₹/दिन)</th>
+              <th style="width: 75px;">कुल DA<br>(₹)</th>
+              <th style="width: 80px;">कुल देय राशि<br>(₹)</th>
+              <th style="width: 120px;">प्राप्तकर्ता खिलाड़ी के<br>हस्ताक्षर / रसीदी टिकट</th>
+            </tr>
+          </thead>
+          <tbody id="p6_tableBody">
+            <!-- Populated dynamically -->
+          </tbody>
+          <tfoot>
+            <tr style="font-weight: 800; background: #F2F2F2;">
+              <td colspan="4" style="text-align: right; padding-right: 10px;">महायोग (Grand Total) :</td>
+              <td id="p6_totalTA">₹1,800</td>
+              <td>-</td>
+              <td>-</td>
+              <td id="p6_totalDA">₹3,000</td>
+              <td id="p6_grandTotal" style="font-size: 13px; color: #000;">₹4,800</td>
+              <td style="font-size: 10px;">नकद भुगतान सत्यापित</td>
+            </tr>
+          </tfoot>
+        </table>
+
+        <div style="font-size: 12px; margin: 8px 0; font-weight: 700;">
+          कुल राशि शब्दों में : <span id="p6_wordsTotal" style="text-decoration: underline;">चार हजार आठ सौ रुपये मात्र</span>
+        </div>
+
+        <div class="cert-paragraph" style="margin-top: 8px;">
+          <strong>प्रमाण-पत्र :</strong> प्रमाणित किया जाता है कि उपरोक्त दर्शित राशि का वास्तविक नकद भुगतान संबंधित खिलाड़ियों को प्रतियोगिता में भागीदारी एवं यात्रा व्यय हेतु उनके हस्ताक्षरों के समक्ष विधिवत कर दिया गया है। कोई भी खिलाड़ी इस भुगतान से वंचित नहीं रहा है तथा यह व्यय स्वीकृत बजट नियमों के अनुसार है।
+        </div>
+
+        <div class="sign-row" style="margin-top: 30px;">
+          <div class="sign-block">
+            <div class="sign-line" id="p6_signTeacher">श्री रामकेश मीना</div>
+            <div class="sign-title">शारीरिक शिक्षक / दल प्रभारी<br>(भुगतानकर्ता)</div>
+          </div>
+          <div class="sign-block">
+            <div style="font-size: 11px; margin-bottom: 25px;">(कार्यालय मोहर)</div>
+            <div class="sign-title">सील मय दिनांक</div>
+          </div>
+          <div class="sign-block">
+            <div class="sign-line" id="p6_signPrincipal">श्री विजय सिंह मीना</div>
+            <div class="sign-title">संस्था प्रधान / मुख्य संयोजक<br>(स्वीकृतिकर्ता अधिकारी)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         TAB 7: GAME SCORE SHEET (DYNAMIC)
+         ========================================== -->
+    <section id="tab7" class="tab-content">
+      <div class="card screen-only-form">
+        <div class="card-header">
+          <div class="card-title">📋 खेल स्कोर शीट सेटअप (Match Configuration)</div>
+          <span style="font-size: 12px; color: var(--primary); font-weight: 600;">खेल अनुसार स्कोर लेआउट स्वतः बदलेगा</span>
+        </div>
+        <div class="card-body">
+          <div class="grid-3">
+            <div class="form-group">
+              <label>टीम 'अ' (Team A) :</label>
+              <input type="text" id="p7_teamA" class="form-control" value="रा.उ.मा.वि. समलेटी (दौसा)" oninput="renderScoreSheet()">
+            </div>
+            <div class="form-group">
+              <label>टीम 'ब' (Team B) :</label>
+              <input type="text" id="p7_teamB" class="form-control" value="रा.उ.मा.वि. बड़ागांव (झुंझुनू)" oninput="renderScoreSheet()">
+            </div>
+            <div class="form-group">
+              <label>मैच संख्या व राउंड :</label>
+              <input type="text" id="p7_matchRound" class="form-control" value="मैच सं. 04 (क्वार्टर फाइनल)" oninput="renderScoreSheet()">
+            </div>
+            <div class="form-group">
+              <label>टॉस विजेता व निर्णय :</label>
+              <input type="text" id="p7_toss" class="form-control" value="टीम 'अ' ने टॉस जीतकर कोर्ट चुना" oninput="renderScoreSheet()">
+            </div>
+            <div class="form-group">
+              <label>स्कोर शीट खेल प्रारूप :</label>
+              <select id="p7_gameSelect" class="form-control" onchange="renderScoreSheet()">
+                <option value="कबड्डी">कबड्डी (Kabaddi Official Running Grid)</option>
+                <option value="खो-खो">खो-खो (Kho-Kho Inning Summary)</option>
+                <option value="सॉफ्टबॉल">सॉफ्टबॉल (Softball 7-Inning Box Score)</option>
+                <option value="वॉलीबॉल">वॉलीबॉल (Volleyball Sets)</option>
+                <option value="एथलेटिक्स">एथलेटिक्स / सामान्य खेल</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="print-bar no-print">
+        <div class="print-bar-info">
+          📋 आधिकारिक खेल स्कोर शीट (Official Game Score Sheet)
+        </div>
+        <button class="btn btn-print" onclick="triggerPrint('खेल_स्कोर_शीट')">
+          🖨️ A4 प्रिंट / PDF सेव करें
+        </button>
+      </div>
+
+      <div class="print-sheet print-area">
+        <div class="doc-header">
+          <div class="doc-govt-tag">राजस्थान सरकार - स्कूल शिक्षा विभाग</div>
+          <div class="doc-main-title" id="p7_docTournament">70वीं जिला स्तरीय विद्यालयी खेलकूद प्रतियोगिता</div>
+          <div class="doc-proforma-badge">आधिकारिक खेल स्कोर शीट (OFFICIAL MATCH SCORE SHEET)</div>
+          <div class="doc-sub-text">सत्र 2026-27 | खेल: <strong id="p7_d_gameTitle">कबड्डी</strong> | <span id="p7_d_round">मैच सं. 04 (क्वार्टर फाइनल)</span></div>
+        </div>
+
+        <div class="meta-box-grid">
+          <div class="meta-item"><strong>टीम 'अ' (Team A) :</strong> <span id="p7_d_teamA">रा.उ.मा.वि. समलेटी (दौसा)</span></div>
+          <div class="meta-item"><strong>टीम 'ब' (Team B) :</strong> <span id="p7_d_teamB">रा.उ.मा.वि. बड़ागांव (झुंझुनू)</span></div>
+          <div class="meta-item"><strong>टॉस विवरण :</strong> <span id="p7_d_toss">टीम 'अ' ने टॉस जीतकर कोर्ट चुना</span></div>
+          <div class="meta-item"><strong>स्थान व दिनांक :</strong> <span id="p7_d_venueDate">रा.उ.मा.वि. बड़ागांव | 24/10/2026</span></div>
+        </div>
+
+        <!-- DYNAMIC GAME LAYOUT INJECTED HERE -->
+        <div id="dynamicScoreContainer"></div>
+
+        <!-- Final Result Block -->
+        <div style="border: 2px solid #000; padding: 8px 12px; margin-top: 14px; background: #FAFAFA;">
+          <div style="display: flex; justify-content: space-between; align-items: center; font-size: 13px; font-weight: 700;">
+            <div>मध्यांतर स्कोर (Half Time) : <span id="p7_htScore">14 - 10</span></div>
+            <div>अंतिम स्कोर (Final Score) : <strong style="font-size: 15px;" id="p7_ftScore">32 - 24</strong></div>
+            <div>विजेता टीम : <strong style="font-size: 15px; color: #047857;" id="p7_winnerText">टीम 'अ' (रा.उ.मा.वि. समलेटी)</strong></div>
+          </div>
+        </div>
+
+        <div class="sign-row" style="margin-top: 30px;">
+          <div class="sign-block">
+            <div class="sign-line">कप्तान (टीम 'अ')</div>
+            <div class="sign-title">हस्ताक्षर मय नाम</div>
+          </div>
+          <div class="sign-block">
+            <div class="sign-line">कप्तान (टीम 'ब')</div>
+            <div class="sign-title">हस्ताक्षर मय नाम</div>
+          </div>
+          <div class="sign-block">
+            <div class="sign-line">आधिकारिक स्कोरर</div>
+            <div class="sign-title">हस्ताक्षर मय पद</div>
+          </div>
+          <div class="sign-block">
+            <div class="sign-line">मुख्य निर्णायक / रेफरी</div>
+            <div class="sign-title">हस्ताक्षर मय सील</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         TAB 8: RELIEVING CERTIFICATE
+         ========================================== -->
+    <section id="tab8" class="tab-content">
+      <div class="card screen-only-form">
+        <div class="card-header">
+          <div class="card-title">📄 कार्यमुक्ति एवं उपस्थिति प्रमाण-पत्र संपादन</div>
+        </div>
+        <div class="card-body">
+          <div class="grid-2">
+            <div class="form-group">
+              <label>अधिकारी / शिक्षक का नाम व पद :</label>
+              <input type="text" id="p8_officerName" class="form-control" value="श्री रामकेश मीना, वरिष्ठ शारीरिक शिक्षक" oninput="renderRelievingSheet()">
+            </div>
+            <div class="form-group">
+              <label>मूल पदस्थापन विद्यालय :</label>
+              <input type="text" id="p8_officerSchool" class="form-control" value="रा.उ.मा.वि. समलेटी, ब्लॉक महवा (दौसा)" oninput="renderRelievingSheet()">
+            </div>
+            <div class="form-group">
+              <label>ड्यूटी की भूमिका :</label>
+              <select id="p8_role" class="form-control" onchange="renderRelievingSheet()">
+                <option value="दल प्रभारी (Team Manager / Incharge)">दल प्रभारी (Team Manager / Incharge)</option>
+                <option value="मुख्य निर्णायक / रेफरी (Chief Referee)">मुख्य निर्णायक / रेफरी (Chief Referee)</option>
+                <option value="निर्णायक / अंपायर (Match Official)">निर्णायक / अंपायर (Match Official)</option>
+                <option value="शिविर / आवास व्यवस्था प्रभारी">शिविर / आवास व्यवस्था प्रभारी</option>
+                <option value="चयन समिति सदस्य (Selection Committee)">चयन समिति सदस्य (Selection Committee)</option>
+                <option value="तकनीकी अधिकारी व स्कोरर">तकनीकी अधिकारी व स्कोरर</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>कार्यालय आदेश / पत्रांक संख्या :</label>
+              <input type="text" id="p8_dispatchNo" class="form-control" value="शि.वि./खेल/2026/1842" oninput="renderRelievingSheet()">
+            </div>
+            <div class="form-group">
+              <label>कार्यमुक्ति दिनांक व समय :</label>
+              <input type="text" id="p8_relieveDateTime" class="form-control" value="26/10/2026 मध्याह्न पश्चात" oninput="renderRelievingSheet()">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="print-bar no-print">
+        <div class="print-bar-info">
+          📄 कार्यमुक्ति एवं उपस्थिति प्रमाण-पत्र (Relieving & Attendance Certificate)
+        </div>
+        <button class="btn btn-print" onclick="triggerPrint('कार्यमुक्ति_प्रमाण_पत्र')">
+          🖨️ A4 प्रिंट / PDF सेव करें
+        </button>
+      </div>
+
+      <div class="print-sheet print-area">
+        <div class="doc-header">
+          <div class="doc-govt-tag">राजस्थान सरकार - स्कूल शिक्षा विभाग</div>
+          <div style="font-size: 15px; font-weight: 700;">कार्यालय मुख्य संयोजक एवं प्रधानाचार्य</div>
+          <div class="doc-main-title" id="p8_docTournament">70वीं जिला स्तरीय विद्यालयी खेलकूद प्रतियोगिता</div>
+          <div class="doc-sub-text">स्थान: <span id="p8_d_venue">रा.उ.मा.वि. समलेटी / बड़ागांव (झुंझुनू)</span> | सत्र: 2026-27</div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; font-size: 12px; margin: 12px 0 20px; font-weight: 700;">
+          <div>क्रमांक: <span id="p8_d_dispatch">शि.वि./खेल/2026/1842</span></div>
+          <div>दिनांक: <span id="p8_d_curDate">26/10/2026</span></div>
+        </div>
+
+        <div style="text-align: center; margin-bottom: 24px;">
+          <div class="doc-proforma-badge" style="font-size: 15px; padding: 4px 16px;">
+            उपस्थिति एवं कार्यमुक्ति प्रमाण-पत्र (RELIEVING CERTIFICATE)
+          </div>
+        </div>
+
+        <div style="font-size: 13px; line-height: 2.1; text-align: justify; margin: 20px 0;">
+          प्रमाणित किया जाता है कि <strong><span id="p8_d_name">श्री रामकेश मीना, वरिष्ठ शारीरिक शिक्षक</span></strong>, मूल पदस्थापन <strong><span id="p8_d_school">रा.उ.मा.वि. समलेटी, ब्लॉक महवा (दौसा)</span></strong> ने इस कार्यालय द्वारा आयोजित <strong><span id="p8_d_tournText">70वीं जिला स्तरीय विद्यालयी खेलकूद प्रतियोगिता</span></strong> (खेल: <strong><span id="p8_d_game">कबड्डी</span></strong>) में दिनांक <strong><span id="p8_d_dates">23/10/2026 से 26/10/2026</span></strong> तक <strong><span id="p8_d_role" style="text-decoration: underline;">दल प्रभारी (Team Manager / Incharge)</span></strong> के रूप में अपने पदीय दायित्वों का निष्ठापूर्वक एवं पूर्ण लगन से निर्वहन किया है।
+        </div>
+
+        <div style="font-size: 13px; line-height: 2.1; text-align: justify; margin-bottom: 20px;">
+          प्रतियोगिता का समापन आज दिनांक <strong><span id="p8_d_relieveDate">26/10/2026</span></strong> को सफलतापूर्वक संपन्न होने के उपरांत इन्हें आज <strong><span id="p8_d_relieveTime">26/10/2026 मध्याह्न पश्चात</span></strong> अपने मूल पदस्थापन विद्यालय में पुनः कार्यग्रहण करने हेतु कार्यमुक्त (Relieve) किया जाता है।
+        </div>
+
+        <div style="font-size: 12.5px; line-height: 1.8; text-align: justify; background: #F8FAFC; border: 1px dashed #666; padding: 8px 12px; margin-bottom: 30px;">
+          <strong>टीप :</strong> प्रतियोगिता अवधि के दौरान इनका आचरण, सहयोग एवं खेल भावना अनुकरणीय एवं प्रशंसनीय रही है। इन्होंने इस आयोजन कार्यालय से कोई यात्रा भत्ता अथवा दैनिक भत्ता आहरित नहीं किया है / नियमानुसार देय होगा।
+        </div>
+
+        <div class="sign-row" style="margin-top: 60px;">
+          <div class="sign-block" style="width: 35%;">
+            <div style="font-size: 11px; margin-bottom: 30px;">(कार्यालय गोल सील)</div>
+            <div class="sign-title">कार्यालय मोहर</div>
+          </div>
+          <div class="sign-block" style="width: 45%;">
+            <div class="sign-line" id="p8_signPrincipal">श्री विजय सिंह मीना</div>
+            <div class="sign-title">मुख्य संयोजक एवं प्रधानाचार्य<br>(हस्ताक्षर मय कार्यालय पद मुहर)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Floating Toast Message -->
+  <div id="toast">
+    <span id="toastMsg">✓ परिवर्तन सुरक्षित कर लिए गए हैं</span>
+  </div>
+
+  <script>
+    /* =========================================================
+       DEFAULT MASTER DATA & LOCAL STORAGE ENGINE
+       ========================================================= */
+    const STORAGE_KEY = 'SPORTS_ALL_FORMAT_V1';
+
+    const defaultMasterData = {
+      tournamentName: "70वीं जिला स्तरीय विद्यालयी खेलकूद प्रतियोगिता",
+      schoolName: "राजकीय उच्च माध्यमिक विद्यालय समलेटी (महवा, दौसा)",
+      venue: "रा.उ.मा.वि. समलेटी / बड़ागांव (झुंझुनू)",
+      gameName: "कबड्डी",
+      ageCategory: "17 वर्ष (छात्र)",
+      tournamentDates: "23/10/2026 से 26/10/2026",
+      inchargeName: "श्री रामकेश मीना (शारीरिक शिक्षक)",
+      principalName: "श्री विजय सिंह मीना (प्रधानाचार्य)",
+      campIncharge: "श्री कमलेश कुमार सैन / श्री हरफूल सिंह गुर्जर",
+      selectedPlayerIndex: 0,
+      players: [
+        {
+          name: "राहुल शर्मा",
+          father: "श्री रामगोपाल शर्मा",
+          dob: "15/07/2009",
+          className: "11वीं",
+          srNo: "4521",
+          mother: "श्रीमती विमला देवी",
+          wordsDob: "पंद्रह जुलाई दो हजार नौ",
+          admDate: "01/07/2021",
+          prevClass: "10वीं (वर्ष 2024 - 68%)",
+          mark: "दाहिने गाल पर तिल",
+          phone: "ग्राम समलेटी (दौसा) मो. 9876543210"
+        },
+        {
+          name: "विक्रम सिंह गुर्जर",
+          father: "श्री सुखबीर सिंह गुर्जर",
+          dob: "08/03/2010",
+          className: "10वीं",
+          srNo: "4680",
+          mother: "श्रीमती संजू देवी",
+          wordsDob: "आठ मार्च दो हजार दस",
+          admDate: "12/07/2022",
+          prevClass: "9वीं (वर्ष 2024 - 72%)",
+          mark: "बायीं भौंह पर पुराना निशान",
+          phone: "समलेटी मो. 9829123456"
+        },
+        {
+          name: "कुलदीप मीना",
+          father: "श्री जगदीश मीना",
+          dob: "22/11/2009",
+          className: "11वीं",
+          srNo: "4492",
+          mother: "श्रीमती प्रेम देवी",
+          wordsDob: "बाईस नवम्बर दो हजार नौ",
+          admDate: "15/07/2021",
+          prevClass: "10वीं (वर्ष 2024 - 65%)",
+          mark: "माथे के मध्य छोटा मस्सा",
+          phone: "महवा (दौसा) मो. 9414098765"
+        },
+        {
+          name: "अजय कुमार सैनी",
+          father: "श्री मुकेश सैनी",
+          dob: "05/01/2010",
+          className: "10वीं",
+          srNo: "4715",
+          mother: "श्रीमती सुशीला देवी",
+          wordsDob: "पाँच जनवरी दो हजार दस",
+          admDate: "05/08/2022",
+          prevClass: "9वीं (वर्ष 2024 - 70%)",
+          mark: "दाहिने हाथ पर कट का निशान",
+          phone: "समलेटी मो. 9636541230"
+        },
+        {
+          name: "देवेन्द्र प्रजापत",
+          father: "श्री रामजीलाल प्रजापत",
+          dob: "18/09/2009",
+          className: "11वीं",
+          srNo: "4534",
+          mother: "श्रीमती गीता देवी",
+          wordsDob: "अठारह सितम्बर दो हजार नौ",
+          admDate: "02/07/2021",
+          prevClass: "10वीं (वर्ष 2024 - 66%)",
+          mark: "गर्दन के पीछे तिल",
+          phone: "महवा मो. 9166784512"
+        }
+      ]
+    };
+
+    let appState = {};
+
+    // Load from localStorage or defaults
+    function initData() {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (stored) {
+        try {
+          appState = JSON.parse(stored);
+        } catch (e) {
+          appState = JSON.parse(JSON.stringify(defaultMasterData));
+        }
+      } else {
+        appState = JSON.parse(JSON.stringify(defaultMasterData));
+      }
+      populateSetupForm();
+      renderAllTabs();
+    }
+
+    function saveState() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(appState));
+      showToast("💾 डेटा सुरक्षित हो गया है");
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toastMsg');
+      toastMsg.innerText = msg;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2000);
+    }
+
+    function confirmResetData() {
+      if (confirm("क्या आप वाकई सभी डेटा को मूल डिफ़ॉल्ट पर रीसेट करना चाहते हैं? आपकी प्रविष्टियां मिट जाएंगी।")) {
+        localStorage.removeItem(STORAGE_KEY);
+        appState = JSON.parse(JSON.stringify(defaultMasterData));
+        populateSetupForm();
+        renderAllTabs();
+        showToast("🔄 डेटा सफलतापूर्वक रीसेट किया गया!");
+      }
+    }
+
+    /* Populate Setup Form Fields */
+    function populateSetupForm() {
+      document.getElementById('cfg_tournamentName').value = appState.tournamentName || "";
+      document.getElementById('cfg_schoolName').value = appState.schoolName || "";
+      document.getElementById('cfg_venue').value = appState.venue || "";
+      document.getElementById('cfg_gameName').value = appState.gameName || "कबड्डी";
+      document.getElementById('cfg_ageCategory').value = appState.ageCategory || "17 वर्ष (छात्र)";
+      document.getElementById('cfg_tournamentDates').value = appState.tournamentDates || "";
+      document.getElementById('cfg_inchargeName').value = appState.inchargeName || "";
+      document.getElementById('cfg_principalName').value = appState.principalName || "";
+      document.getElementById('cfg_campIncharge').value = appState.campIncharge || "";
+
+      document.getElementById('hdr-game-badge').innerText = `${appState.gameName} (${appState.ageCategory})`;
+    }
+
+    function saveMasterData() {
+      appState.tournamentName = document.getElementById('cfg_tournamentName').value;
+      appState.schoolName = document.getElementById('cfg_schoolName').value;
+      appState.venue = document.getElementById('cfg_venue').value;
+      appState.gameName = document.getElementById('cfg_gameName').value;
+      appState.ageCategory = document.getElementById('cfg_ageCategory').value;
+      appState.tournamentDates = document.getElementById('cfg_tournamentDates').value;
+      appState.inchargeName = document.getElementById('cfg_inchargeName').value;
+      appState.principalName = document.getElementById('cfg_principalName').value;
+      appState.campIncharge = document.getElementById('cfg_campIncharge').value;
+
+      document.getElementById('hdr-game-badge').innerText = `${appState.gameName} (${appState.ageCategory})`;
+
+      saveState();
+      renderAllTabs();
+    }
+
+    /* Tab Switching Logic */
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+
+      const target = document.getElementById(tabId);
+      if (target) target.classList.add('active');
+
+      const tabs = Array.from(document.querySelectorAll('.tab-btn'));
+      const activeIdx = ['tab1','tab2','tab3','tab4','tab5','tab6','tab7','tab8'].indexOf(tabId);
+      if (activeIdx >= 0 && tabs[activeIdx]) {
+        tabs[activeIdx].classList.add('active');
+        tabs[activeIdx].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      }
+    }
+
+    /* Player Management */
+    function renderPlayerTable() {
+      const tbody = document.getElementById('playerTableBody');
+      tbody.innerHTML = "";
+
+      appState.players.forEach((p, index) => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td><strong>${index + 1}</strong></td>
+          <td><strong>${p.name}</strong></td>
+          <td>${p.father}</td>
+          <td>${p.dob}</td>
+          <td>${p.className}</td>
+          <td>${p.srNo}</td>
+          <td>${p.mother || '-'}</td>
+          <td>
+            <button class="btn btn-danger-outline" onclick="deletePlayer(${index})" title="खिलाड़ी हटाएं">✖ हटाएं</button>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      document.getElementById('playerCountBadge').innerText = `कुल खिलाड़ी: ${appState.players.length}`;
+    }
+
+    function addPlayer() {
+      const name = document.getElementById('new_name').value.trim();
+      const father = document.getElementById('new_father').value.trim();
+      const dob = document.getElementById('new_dob').value.trim();
+      const className = document.getElementById('new_class').value.trim();
+      const srNo = document.getElementById('new_sr').value.trim();
+      const mother = document.getElementById('new_mother').value.trim();
+      const admDate = document.getElementById('new_admDate').value.trim();
+      const mark = document.getElementById('new_mark').value.trim();
+
+      if (!name || !father || !dob || !className || !srNo) {
+        alert("कृपया खिलाड़ी का नाम, पिता का नाम, जन्मतिथि, कक्षा और एस.आर. नंबर अवश्य भरें!");
+        return;
+      }
+
+      appState.players.push({
+        name,
+        father,
+        dob,
+        className,
+        srNo,
+        mother: mother || "श्रीमती ... देवी",
+        wordsDob: dob,
+        admDate: admDate || "01/07/2022",
+        prevClass: "उत्तीर्ण",
+        mark: mark || "तिल का निशान",
+        phone: "ग्राम समलेटी"
+      });
+
+      // Clear fields
+      document.getElementById('new_name').value = "";
+      document.getElementById('new_father').value = "";
+      document.getElementById('new_dob').value = "";
+      document.getElementById('new_class').value = "";
+      document.getElementById('new_sr').value = "";
+      document.getElementById('new_mother').value = "";
+      document.getElementById('new_admDate').value = "";
+      document.getElementById('new_mark').value = "";
+
+      saveState();
+      renderAllTabs();
+      showToast("➕ खिलाड़ी सफलतापूर्वक शामिल किया गया!");
+    }
+
+    function deletePlayer(index) {
+      if (appState.players.length <= 1) {
+        alert("कम से कम 1 खिलाड़ी सूची में होना आवश्यक है!");
+        return;
+      }
+      if (confirm(`क्या आप ${appState.players[index].name} को सूची से हटाना चाहते हैं?`)) {
+        appState.players.splice(index, 1);
+        if (appState.selectedPlayerIndex >= appState.players.length) {
+          appState.selectedPlayerIndex = 0;
+        }
+        saveState();
+        renderAllTabs();
+        showToast("खिलाड़ी हटाया गया");
+      }
+    }
+
+    /* Render Tab 2: Format 'K' */
+    function renderTab2() {
+      document.getElementById('p2_tournamentName').innerText = appState.tournamentName;
+      document.getElementById('p2_gameName').innerText = appState.gameName;
+      document.getElementById('p2_ageCategory').innerText = appState.ageCategory;
+      document.getElementById('p2_venue').innerText = appState.venue;
+      document.getElementById('p2_dates').innerText = appState.tournamentDates;
+      document.getElementById('p2_schoolName').innerText = appState.schoolName;
+      document.getElementById('p2_inchargeSign').innerText = appState.inchargeName;
+      document.getElementById('p2_principalSign').innerText = appState.principalName;
+
+      const tbody = document.getElementById('p2_tableBody');
+      tbody.innerHTML = "";
+
+      // List all players
+      appState.players.forEach((p, idx) => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td>${idx + 1}</td>
+          <td class="text-left"><strong>${p.name}</strong></td>
+          <td class="text-left">${p.father}</td>
+          <td>${p.dob}</td>
+          <td>${p.className}</td>
+          <td>${p.admDate || '01/07/2022'}</td>
+          <td><strong>${p.srNo}</strong></td>
+          <td style="color: #666; font-size: 10px;">हस्ताक्षर</td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      // Pad rows up to 12
+      const targetRows = Math.max(12, appState.players.length);
+      for (let i = appState.players.length; i < targetRows; i++) {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td>${i + 1}</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        `;
+        tbody.appendChild(tr);
+      }
+    }
+
+    /* Render Tab 3: Format 'KH' */
+    function renderTab3() {
+      const select = document.getElementById('p3_playerSelect');
+      select.innerHTML = "";
+
+      appState.players.forEach((p, idx) => {
+        const opt = document.createElement('option');
+        opt.value = idx;
+        opt.innerText = `${idx + 1}. ${p.name} (SR: ${p.srNo}, कक्षा: ${p.className})`;
+        if (idx === appState.selectedPlayerIndex) {
+          opt.selected = true;
+        }
+        select.appendChild(opt);
+      });
+
+      const current = appState.players[appState.selectedPlayerIndex] || appState.players[0];
+      if (!current) return;
+
+      // Fill screen form inputs
+      document.getElementById('p3_mother').value = current.mother || "";
+      document.getElementById('p3_wordsDob').value = current.wordsDob || "";
+      document.getElementById('p3_admDate').value = current.admDate || "";
+      document.getElementById('p3_prevClass').value = current.prevClass || "";
+      document.getElementById('p3_mark').value = current.mark || "";
+      document.getElementById('p3_phone').value = current.phone || "";
+
+      // Fill printable sheet
+      document.getElementById('p3_docTournament').innerText = appState.tournamentName;
+      document.getElementById('p3_docVenue').innerText = appState.venue;
+      document.getElementById('p3_docGame').innerText = appState.gameName;
+      document.getElementById('p3_docAge').innerText = appState.ageCategory;
+
+      document.getElementById('p3_d_name').innerText = current.name;
+      document.getElementById('p3_d_father').innerText = current.father;
+      document.getElementById('p3_d_mother').innerText = current.mother || "श्रीमती ...";
+      document.getElementById('p3_d_dob').innerText = current.dob;
+      document.getElementById('p3_d_wordsDob').innerText = current.wordsDob || current.dob;
+      document.getElementById('p3_d_admDate').innerText = current.admDate || "01/07/2021";
+      document.getElementById('p3_d_sr').innerText = current.srNo;
+      document.getElementById('p3_d_class').innerText = current.className;
+      document.getElementById('p3_d_prevClass').innerText = current.prevClass || "उत्तीर्ण";
+      document.getElementById('p3_d_mark').innerText = current.mark || "दाहिने गाल पर तिल";
+      document.getElementById('p3_d_phone').innerText = current.phone || "समलेटी (महवा)";
+      document.getElementById('p3_d_school').innerText = appState.schoolName;
+
+      document.getElementById('p3_signPlayer').innerText = current.name;
+      document.getElementById('p3_signTeacher').innerText = appState.inchargeName;
+      document.getElementById('p3_signPrincipal').innerText = appState.principalName;
+    }
+
+    function onPlayerSelectChange() {
+      const idx = parseInt(document.getElementById('p3_playerSelect').value, 10);
+      appState.selectedPlayerIndex = idx;
+      saveState();
+      renderTab3();
+      renderTab4();
+    }
+
+    function updateCurrentPlayerData() {
+      const current = appState.players[appState.selectedPlayerIndex];
+      if (!current) return;
+
+      current.mother = document.getElementById('p3_mother').value;
+      current.wordsDob = document.getElementById('p3_wordsDob').value;
+      current.admDate = document.getElementById('p3_admDate').value;
+      current.prevClass = document.getElementById('p3_prevClass').value;
+      current.mark = document.getElementById('p3_mark').value;
+      current.phone = document.getElementById('p3_phone').value;
+
+      saveState();
+      renderTab3();
+      renderTab4();
+    }
+
+    /* Render Tab 4: Format 'G' */
+    function renderTab4() {
+      const current = appState.players[appState.selectedPlayerIndex] || appState.players[0];
+      if (!current) return;
+
+      document.getElementById('p4_docTournament').innerText = appState.tournamentName;
+      document.getElementById('p4_docDates').innerText = appState.tournamentDates;
+
+      // Part 1
+      document.getElementById('p4_parentName').innerText = current.father;
+      document.getElementById('p4_studentName').innerText = current.name;
+      document.getElementById('p4_studentClass').innerText = current.className;
+      document.getElementById('p4_studentSchool').innerText = appState.schoolName;
+      document.getElementById('p4_part1Tourn').innerText = appState.tournamentName;
+      document.getElementById('p4_part1Game').innerText = `${appState.gameName} (${appState.ageCategory})`;
+      document.getElementById('p4_parentSign').innerText = current.father;
+      document.getElementById('p4_parentPhone').innerText = current.phone || "9876543210";
+
+      // Part 2
+      document.getElementById('p4_medStudentName').innerText = current.name;
+      document.getElementById('p4_medFatherName').innerText = current.father;
+      document.getElementById('p4_medGame').innerText = appState.gameName;
+
+      // Part 3
+      document.getElementById('p4_headStudent').innerText = current.name;
+      document.getElementById('p4_headFather').innerText = current.father;
+      document.getElementById('p4_headSr').innerText = current.srNo;
+      document.getElementById('p4_headSchool').innerText = appState.schoolName;
+      document.getElementById('p4_headClass').innerText = current.className;
+      document.getElementById('p4_headDob').innerText = current.dob;
+
+      document.getElementById('p4_headTeacher').innerText = appState.inchargeName;
+      document.getElementById('p4_headPrincipal').innerText = appState.principalName;
+    }
+
+    /* Render Tab 5: Camp & Accommodation */
+    function renderCampSheet() {
+      const campType = document.getElementById('p5_campType').value;
+      const building = document.getElementById('p5_buildingName').value;
+      const rooms = document.getElementById('p5_rooms').value;
+
+      document.getElementById('p5_docTournament').innerText = appState.tournamentName;
+      document.getElementById('p5_d_building').innerText = building;
+      document.getElementById('p5_d_rooms').innerText = rooms;
+      document.getElementById('p5_d_campType').innerText = campType;
+      document.getElementById('p5_d_game').innerText = `${appState.gameName} (${appState.ageCategory})`;
+      document.getElementById('p5_d_venue').innerText = appState.venue;
+      document.getElementById('p5_d_incharge').innerText = appState.campIncharge;
+      document.getElementById('p5_d_school').innerText = appState.schoolName;
+
+      document.getElementById('p5_signCampIncharge').innerText = appState.campIncharge.split('/')[0] || "शिविर प्रभारी";
+      document.getElementById('p5_signCoach').innerText = appState.inchargeName;
+      document.getElementById('p5_signPrincipal').innerText = appState.principalName;
+
+      const tbody = document.getElementById('p5_tableBody');
+      tbody.innerHTML = "";
+
+      appState.players.forEach((p, idx) => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td>${idx + 1}</td>
+          <td class="text-left"><strong>${p.name}</strong></td>
+          <td class="text-left">${p.father}</td>
+          <td>${p.className}</td>
+          <td>08:00 AM</td>
+          <td>कक्ष ${(idx % 3) + 4}</td>
+          <td>उपस्थित</td>
+          <td>उपस्थित</td>
+          <td style="font-size: 10px; color: #555;">हस्ताक्षर</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    /* Helper: Number to Hindi Words */
+    function numberToHindiWords(num) {
+      if (num === 0) return "शून्य";
+      const ones = ["", "एक", "दो", "तीन", "चार", "पाँच", "छह", "सात", "आठ", "नौ", "दस",
+        "ग्यारह", "बारह", "तेरह", "चौदह", "पंद्रह", "सोलह", "सत्रह", "अठारह", "उन्नीस", "बीस",
+        "इक्कीस", "बाईस", "तेईस", "चौबीस", "पचीस", "छब्बीस", "सत्ताईस", "अट्ठाइस", "उनतीस", "तीस",
+        "इकतीस", "बत्तीस", "तैंतीस", "चौंतीस", "पैंतीस", "छत्तीस", "सैंतीस", "अड़तीस", "उनतालीस", "चालीस",
+        "इकतालीस", "बयालीस", "तैंतालीस", "चवालीस", "पैंतालीस", "छियालीस", "सैंतालीस", "अड़तालीस", "उनचास", "पचास",
+        "इक्यावन", "बावन", "तिरेपन", "चौवन", "पचपन", "छप्पन", "सत्तावन", "अट्ठावन", "उनसठ", "साठ",
+        "इकसठ", "बासठ", "तिरेसठ", "चौंसठ", "पैंसठ", "छियासठ", "सरसठ", "अड़सठ", "उनहत्तर", "सत्तर",
+        "इकहत्तर", "बहत्तर", "तिहत्तर", "चौहत्तर", "पचहत्तर", "छिहत्तर", "सतहत्तर", "अठहत्तर", "उन्नासी", "अस्सी",
+        "इक्यासी", "बयासी", "तिरासी", "चौरासी", "पचासी", "छियासी", "सत्तासी", "अट्ठासी", "नवासी", "नब्बे",
+        "इक्यानवे", "बानवे", "तिरानवे", "चौरानवे", "पंचानवे", "छियानवे", "सत्तानवे", "अट्ठानवे", "निन्यानवे"];
+
+      let str = "";
+      if (Math.floor(num / 1000) > 0) {
+        str += ones[Math.floor(num / 1000)] + " हजार ";
+        num %= 1000;
+      }
+      if (Math.floor(num / 100) > 0) {
+        str += ones[Math.floor(num / 100)] + " सौ ";
+        num %= 100;
+      }
+      if (num > 0) {
+        str += ones[num] + " ";
+      }
+      return str.trim() + " रुपये मात्र";
+    }
+
+    /* Render Tab 6: TA/DA Calculations */
+    function calculateTADA() {
+      const route = document.getElementById('p6_route').value;
+      const mode = document.getElementById('p6_mode').value;
+      const taRate = parseFloat(document.getElementById('p6_taRate').value) || 0;
+      const days = parseFloat(document.getElementById('p6_days').value) || 0;
+      const daRate = parseFloat(document.getElementById('p6_daRate').value) || 0;
+
+      const singleDA = days * daRate;
+      const singleTotal = taRate + singleDA;
+
+      document.getElementById('p6_docTournament').innerText = appState.tournamentName;
+      document.getElementById('p6_d_route').innerText = route;
+      document.getElementById('p6_d_mode').innerText = mode;
+      document.getElementById('p6_d_school').innerText = appState.schoolName;
+      document.getElementById('p6_d_game').innerText = `${appState.gameName} (${appState.ageCategory})`;
+      document.getElementById('p6_d_dates').innerText = appState.tournamentDates;
+      document.getElementById('p6_d_rates').innerText = `₹${daRate} प्रति दिन × ${days} दिवस = ₹${singleDA}`;
+
+      document.getElementById('p6_signTeacher').innerText = appState.inchargeName;
+      document.getElementById('p6_signPrincipal').innerText = appState.principalName;
+
+      const tbody = document.getElementById('p6_tableBody');
+      tbody.innerHTML = "";
+
+      let grandTA = 0;
+      let grandDA = 0;
+      let grandTotal = 0;
+
+      appState.players.forEach((p, idx) => {
+        grandTA += taRate;
+        grandDA += singleDA;
+        grandTotal += singleTotal;
+
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td>${idx + 1}</td>
+          <td class="text-left"><strong>${p.name}</strong></td>
+          <td class="text-left">${p.father}</td>
+          <td>${p.className}</td>
+          <td>₹${taRate.toLocaleString('en-IN')}</td>
+          <td>${days}</td>
+          <td>₹${daRate.toLocaleString('en-IN')}</td>
+          <td>₹${singleDA.toLocaleString('en-IN')}</td>
+          <td><strong>₹${singleTotal.toLocaleString('en-IN')}</strong></td>
+          <td style="font-size: 10px; color: #555;">हस्ताक्षर मय रसीद</td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      document.getElementById('p6_totalTA').innerText = `₹${grandTA.toLocaleString('en-IN')}`;
+      document.getElementById('p6_totalDA').innerText = `₹${grandDA.toLocaleString('en-IN')}`;
+      document.getElementById('p6_grandTotal').innerText = `₹${grandTotal.toLocaleString('en-IN')}`;
+      document.getElementById('p6_wordsTotal').innerText = numberToHindiWords(grandTotal);
+    }
+
+    /* Render Tab 7: Dynamic Game-Specific Score Sheet */
+    function renderScoreSheet() {
+      const teamA = document.getElementById('p7_teamA').value;
+      const teamB = document.getElementById('p7_teamB').value;
+      const matchRound = document.getElementById('p7_matchRound').value;
+      const toss = document.getElementById('p7_toss').value;
+      const game = document.getElementById('p7_gameSelect').value;
+
+      document.getElementById('p7_docTournament').innerText = appState.tournamentName;
+      document.getElementById('p7_d_gameTitle').innerText = game;
+      document.getElementById('p7_d_round').innerText = matchRound;
+      document.getElementById('p7_d_teamA').innerText = teamA;
+      document.getElementById('p7_d_teamB').innerText = teamB;
+      document.getElementById('p7_d_toss').innerText = toss;
+      document.getElementById('p7_d_venueDate').innerText = `${appState.venue} | ${appState.tournamentDates.split('से')[0] || ''}`;
+
+      const container = document.getElementById('dynamicScoreContainer');
+      container.innerHTML = "";
+
+      if (game === "कबड्डी") {
+        container.innerHTML = `
+          <!-- Kabaddi Layout -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 8px;">
+            <!-- Team A Box -->
+            <div style="border: 1.5px solid #000; padding: 8px; border-radius: 4px;">
+              <div style="background: #E2E8F0; padding: 4px; font-weight: 800; text-align: center; font-size: 13px;">
+                टीम 'अ' : ${teamA}
+              </div>
+              <div style="font-size: 11px; font-weight: 700; margin: 6px 0 2px;">रनिंग स्कोर ग्रिड (1 से 25 अंक) :</div>
+              <div class="score-matrix-grid" id="grid_teamA">
+                ${Array.from({length: 25}, (_, i) => `<div class="score-num-cell ${i < 18 ? 'checked' : ''}" onclick="this.classList.toggle('checked')">${i+1}</div>`).join('')}
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 11px; margin-top: 6px; border-top: 1px dashed #666; padding-top: 4px;">
+                <div>लोना (Lona 2 अंक): [ ✓ ] [ ✓ ]</div>
+                <div>सुपर टैकल: [ ✓ ] [ ]</div>
+                <div>टाइम आउट: 1st [✓] 2nd [ ]</div>
+              </div>
+            </div>
+
+            <!-- Team B Box -->
+            <div style="border: 1.5px solid #000; padding: 8px; border-radius: 4px;">
+              <div style="background: #E2E8F0; padding: 4px; font-weight: 800; text-align: center; font-size: 13px;">
+                टीम 'ब' : ${teamB}
+              </div>
+              <div style="font-size: 11px; font-weight: 700; margin: 6px 0 2px;">रनिंग स्कोर ग्रिड (1 से 25 अंक) :</div>
+              <div class="score-matrix-grid" id="grid_teamB">
+                ${Array.from({length: 25}, (_, i) => `<div class="score-num-cell ${i < 12 ? 'checked' : ''}" onclick="this.classList.toggle('checked')">${i+1}</div>`).join('')}
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 11px; margin-top: 6px; border-top: 1px dashed #666; padding-top: 4px;">
+                <div>लोना (Lona 2 अंक): [ ✓ ] [ ]</div>
+                <div>सुपर टैकल: [ ] [ ]</div>
+                <div>टाइम आउट: 1st [✓] 2nd [✓]</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Raider & Tackle Details Table -->
+          <table class="print-table" style="margin-top: 10px;">
+            <thead>
+              <tr>
+                <th colspan="4">टीम 'अ' (रेडर व टैकल विवरण)</th>
+                <th colspan="4">टीम 'ब' (रेडर व टैकल विवरण)</th>
+              </tr>
+              <tr>
+                <th>क्र.</th><th>खिलाड़ी का नाम</th><th>रेड अंक</th><th>टैकल अंक</th>
+                <th>क्र.</th><th>खिलाड़ी का नाम</th><th>रेड अंक</th><th>टैकल अंक</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td><td class="text-left">${appState.players[0] ? appState.players[0].name : 'राहुल शर्मा'}</td><td>8</td><td>2</td>
+                <td>1</td><td class="text-left">अमित कुमार गुर्जर</td><td>6</td><td>1</td>
+              </tr>
+              <tr>
+                <td>2</td><td class="text-left">${appState.players[1] ? appState.players[1].name : 'विक्रम सिंह'}</td><td>4</td><td>4</td>
+                <td>2</td><td class="text-left">रोहित यादव</td><td>3</td><td>2</td>
+              </tr>
+              <tr>
+                <td>3</td><td class="text-left">${appState.players[2] ? appState.players[2].name : 'कुलदीप मीना'}</td><td>3</td><td>3</td>
+                <td>3</td><td class="text-left">सुनील प्रजापत</td><td>2</td><td>1</td>
+              </tr>
+            </tbody>
+          </table>
+        `;
+        document.getElementById('p7_htScore').innerText = "14 - 10";
+        document.getElementById('p7_ftScore').innerText = "32 - 24";
+        document.getElementById('p7_winnerText').innerText = `टीम 'अ' (${teamA}) 8 अंकों से विजयी`;
+      } else if (game === "खो-खो") {
+        container.innerHTML = `
+          <!-- Kho-Kho Layout -->
+          <table class="print-table" style="margin-top: 10px;">
+            <thead>
+              <tr>
+                <th rowspan="2">टीम का नाम</th>
+                <th colspan="2">प्रथम पारी (Inning 1)</th>
+                <th colspan="2">द्वितीय पारी (Inning 2)</th>
+                <th rowspan="2">कुल आउट</th>
+                <th rowspan="2">कुल अंक</th>
+                <th rowspan="2">रिमार्क</th>
+              </tr>
+              <tr>
+                <th>टर्न 1 (चेज़र)</th><th>टर्न 2 (डिफेंडर)</th>
+                <th>टर्न 3 (चेज़र)</th><th>टर्न 4 (डिफेंडर)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-left"><strong>${teamA}</strong></td>
+                <td>08 अंक</td><td>05 मिनट 40 से.</td>
+                <td>09 अंक</td><td>06 मिनट 10 से.</td>
+                <td>17 खिलाड़ी</td>
+                <td><strong>17 अंक</strong></td>
+                <td>विजेता</td>
+              </tr>
+              <tr>
+                <td class="text-left"><strong>${teamB}</strong></td>
+                <td>06 अंक</td><td>04 मिनट 20 से.</td>
+                <td>07 अंक</td><td>05 मिनट 00 से.</td>
+                <td>13 खिलाड़ी</td>
+                <td><strong>13 अंक</strong></td>
+                <td>उप-विजेता</td>
+              </tr>
+            </tbody>
+          </table>
+        `;
+        document.getElementById('p7_htScore').innerText = "8 - 6";
+        document.getElementById('p7_ftScore').innerText = "17 - 13";
+        document.getElementById('p7_winnerText').innerText = `टीम 'अ' (${teamA}) 4 अंकों व 1 पारी से विजयी`;
+      } else if (game === "सॉफ्टबॉल") {
+        container.innerHTML = `
+          <!-- Softball Box Score -->
+          <table class="print-table" style="margin-top: 10px;">
+            <thead>
+              <tr>
+                <th class="text-left" style="width: 170px;">टीम / पारी (Inning)</th>
+                <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th>
+                <th style="background:#E2E8F0;">R (रन)</th>
+                <th>H (हिट)</th>
+                <th>E (एरर)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-left"><strong>${teamA}</strong></td>
+                <td>2</td><td>0</td><td>3</td><td>1</td><td>2</td><td>0</td><td>1</td>
+                <td style="font-weight: 800; font-size: 13px;">9</td>
+                <td>11</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td class="text-left"><strong>${teamB}</strong></td>
+                <td>1</td><td>1</td><td>0</td><td>2</td><td>0</td><td>1</td><td>0</td>
+                <td style="font-weight: 800; font-size: 13px;">5</td>
+                <td>7</td>
+                <td>2</td>
+              </tr>
+            </tbody>
+          </table>
+        `;
+        document.getElementById('p7_htScore').innerText = "5 - 2";
+        document.getElementById('p7_ftScore').innerText = "9 - 5";
+        document.getElementById('p7_winnerText').innerText = `टीम 'अ' (${teamA}) 4 रनों से विजयी`;
+      } else if (game === "वॉलीबॉल") {
+        container.innerHTML = `
+          <!-- Volleyball Layout -->
+          <table class="print-table" style="margin-top: 10px;">
+            <thead>
+              <tr>
+                <th class="text-left">टीम का नाम</th>
+                <th>सेट 1</th><th>सेट 2</th><th>सेट 3</th><th>सेट 4</th><th>सेट 5</th>
+                <th>कुल सेट</th><th>परिणाम</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-left"><strong>${teamA}</strong></td>
+                <td>25</td><td>21</td><td>25</td><td>25</td><td>-</td>
+                <td><strong>3</strong></td>
+                <td>विजेता (3 - 1)</td>
+              </tr>
+              <tr>
+                <td class="text-left"><strong>${teamB}</strong></td>
+                <td>19</td><td>25</td><td>18</td><td>20</td><td>-</td>
+                <td><strong>1</strong></td>
+                <td>उप-विजेता</td>
+              </tr>
+            </tbody>
+          </table>
+        `;
+        document.getElementById('p7_htScore').innerText = "सेट 1-1";
+        document.getElementById('p7_ftScore').innerText = "3 - 1 (Sets)";
+        document.getElementById('p7_winnerText').innerText = `टीम 'अ' (${teamA}) 3-1 सेट से विजयी`;
+      } else {
+        container.innerHTML = `
+          <!-- Athletics / General Layout -->
+          <table class="print-table" style="margin-top: 10px;">
+            <thead>
+              <tr>
+                <th>स्थान</th><th>चेस्ट सं.</th><th>खिलाड़ी का नाम</th><th>विद्यालय का नाम</th>
+                <th>इवेंट / दूरी / समय</th><th>अंक</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>प्रथम (Gold)</strong></td><td>104</td><td>${appState.players[0] ? appState.players[0].name : 'राहुल शर्मा'}</td>
+                <td class="text-left">${teamA}</td><td>100 मी. दौड़ (11.8 से.)</td><td>05</td>
+              </tr>
+              <tr>
+                <td><strong>द्वितीय (Silver)</strong></td><td>118</td><td>सुरेश कुमार जाट</td>
+                <td class="text-left">${teamB}</td><td>100 मी. दौड़ (12.1 से.)</td><td>03</td>
+              </tr>
+              <tr>
+                <td><strong>तृतीय (Bronze)</strong></td><td>107</td><td>${appState.players[1] ? appState.players[1].name : 'विक्रम सिंह'}</td>
+                <td class="text-left">${teamA}</td><td>100 मी. दौड़ (12.4 से.)</td><td>01</td>
+              </tr>
+            </tbody>
+          </table>
+        `;
+        document.getElementById('p7_htScore').innerText = "-";
+        document.getElementById('p7_ftScore').innerText = "Gold: 104";
+        document.getElementById('p7_winnerText').innerText = `प्रथम स्थान: ${appState.players[0] ? appState.players[0].name : 'राहुल शर्मा'}`;
+      }
+    }
+
+    /* Render Tab 8: Relieving Certificate */
+    function renderRelievingSheet() {
+      const name = document.getElementById('p8_officerName').value;
+      const school = document.getElementById('p8_officerSchool').value;
+      const role = document.getElementById('p8_role').value;
+      const dispatch = document.getElementById('p8_dispatchNo').value;
+      const relieve = document.getElementById('p8_relieveDateTime').value;
+
+      document.getElementById('p8_docTournament').innerText = appState.tournamentName;
+      document.getElementById('p8_d_venue').innerText = appState.venue;
+      document.getElementById('p8_d_dispatch').innerText = dispatch;
+      document.getElementById('p8_d_curDate').innerText = appState.tournamentDates.split('से')[1] ? appState.tournamentDates.split('से')[1].trim() : '26/10/2026';
+
+      document.getElementById('p8_d_name').innerText = name;
+      document.getElementById('p8_d_school').innerText = school;
+      document.getElementById('p8_d_tournText').innerText = appState.tournamentName;
+      document.getElementById('p8_d_game').innerText = `${appState.gameName} (${appState.ageCategory})`;
+      document.getElementById('p8_d_dates').innerText = appState.tournamentDates;
+      document.getElementById('p8_d_role').innerText = role;
+
+      document.getElementById('p8_d_relieveDate').innerText = relieve.split(' ')[0] || '26/10/2026';
+      document.getElementById('p8_d_relieveTime').innerText = relieve;
+      document.getElementById('p8_signPrincipal').innerText = appState.principalName;
+    }
+
+    /* Render Everything */
+    function renderAllTabs() {
+      renderPlayerTable();
+      renderTab2();
+      renderTab3();
+      renderTab4();
+      renderCampSheet();
+      calculateTADA();
+      renderScoreSheet();
+      renderRelievingSheet();
+    }
+
+    /* Unified Print Trigger */
+    function triggerPrint(formatName) {
+      if (window.AndroidBridge && window.AndroidBridge.print) {
+        window.AndroidBridge.print(formatName);
+      } else {
+        window.print();
+      }
+    }
+
+    // Startup
+    window.addEventListener('DOMContentLoaded', () => {
+      initData();
+    });
+  </script>
+</body>
+</html>

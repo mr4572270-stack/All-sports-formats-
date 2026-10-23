@@ -1,0 +1,8 @@
+{
+  "name": "SPORTS ALL FORMAT",
+  "description": "मेरा सपना - मेरा विद्यालय | राजस्थान विद्यालयी खेलकूद संपूर्ण प्रपत्र एवं स्कोर शीट जनरेटर",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
